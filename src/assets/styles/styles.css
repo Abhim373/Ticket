@@ -1,31 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
-html, body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-}
-
-body {
-  font-family: Roboto, Arial, sans-serif;
-  padding: 0;
-  margin: 0;
-}
-
 .sidenav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 16rem;
+  width: 240px;
   overflow-x: hidden;
   background: #2d3e5c;
   border-radius: 0 1rem 1rem 0;
@@ -55,36 +32,22 @@ body {
   margin-left: 1.5rem;
 }
 
-.sidenav__menus__list {
-  width: 15rem;
-  margin-left: 0.5rem;
-}
-
 .sidenav__menu-item {
-  width: 15rem;
-  background: #2d3e5c;
-  color: #6487F6;
-}
-
-.sidenav__menu-item__logo {
-  width: 2rem;
-  padding: 0 1rem 0 0;
-}
-
-.sidenav__menu-item__name {
-  display: inline-block;
+  width: 100%;
+  border-radius: 0;
   text-align: left;
-  width: 8rem;
-}
-
-.sidenav__menu-item__pin {
-  width: 2rem;
-  padding: 0 0.5rem 0  1rem;
-}
-
-.sidenav__menu-item:hover {
+  background: #2d3e5c;
+  padding: 10px;
   color: white;
-  background: #185EDF;
+}
+
+.sidenav__item-logo {
+  padding: 0 1rem 0 0.5rem;
+  font-size: 2rem;
+}
+
+.sidenav__item-name {
+  padding: 0 0.5rem 0 0.5rem;
 }
 
 .sidenav__compose {
@@ -92,12 +55,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin: 8rem 0 0 0;
+  padding: 0 1rem;
   background-color: #2d3e5c;
-  height: 2rem;
-  width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .sidenav__compose__button {
