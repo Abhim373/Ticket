@@ -1,9 +1,10 @@
 
 <mat-sidenav-container
 id="sidenavContainer"
-class="sidenavContainer" 
-
+class="sidenavContainer"  
 fullscreen>
+
+
 
 <mat-sidenav
   mode="side"
@@ -145,6 +146,7 @@ fullscreen>
   <mat-card>
 
     <mat-card-header>
+    
       <div 
         mat-card-avatar 
         class="avatar">
@@ -158,5 +160,11 @@ fullscreen>
 
   
 </mat-sidenav>
+<mat-sidenav-content
+[ngStyle]="{ 'margin-left.rem': contentMargin }"
+>
+<app-header></app-header>
+<app-ticket-container></app-ticket-container>
+</mat-sidenav-content>
 
 </mat-sidenav-container>

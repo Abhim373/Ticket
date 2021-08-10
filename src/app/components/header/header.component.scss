@@ -1,0 +1,99 @@
+$text-color:(
+    "counter":#4B80E3,
+    "urgent":crimson,
+    "high": red,
+    "medium": orange,
+    );
+
+.header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    // margin: 4rem 0 0 0;
+    &__h1{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        // margin-top: 3rem;
+        &__back-icon{
+            display: flex;
+            font-size: 10rem;
+            margin: 1rem ;
+            align-items: center;
+            width: auto;
+            max-width: 5%;
+        }
+        &__searchbar{
+            display: flex;
+            width: 75%;
+            margin-top: 1rem;
+            
+            align-items: center;
+            &__mat-form-field {
+                width: 100%;
+            }
+        }
+        &__icon1{
+            display: flex;
+            font-size: 10rem;
+            align-items: center;
+            margin-left: 1rem ;
+            // margin: 1rem ;
+            width: auto;
+            max-width: 5%;
+        }
+        &__icon2{
+            display: flex;
+            font-size: 10rem;
+            align-items: center;
+            width: auto;
+            max-width: 5%;
+        }
+        &__icon3{
+            display: flex;
+            font-size: 10rem;
+            align-items: center;
+            // margin: 1rem ;
+            width: auto;
+            max-width: 5%;;
+        }
+        &__icon4{
+            display: flex;
+            font-size: 10rem;
+            align-items: center;
+            // margin: 1rem ;
+            width: auto;
+            max-width: 5%;
+        }
+    }
+    &__h2{
+        display: flex;
+        margin: 1rem 0 1rem 1rem;
+        &__chip1{
+            display: flex;
+            &__text2{
+                display: flex;
+                color: map-get($text-color,"counter");
+            }
+            &__text3{
+                display: flex;
+                color: map-get($text-color,"urgent");
+            }
+            &__text4{
+                display: flex;
+                color: map-get($text-color,"high");
+            }
+            &__text5{
+                display: flex;
+                color: map-get($text-color,"medium");
+            }
+        }
+    }
+}
+.mat-form-field-underline {
+    display: none;
+}

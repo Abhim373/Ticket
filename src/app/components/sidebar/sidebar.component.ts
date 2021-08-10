@@ -8,12 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class SidebarComponent  {
 
   isMenuOpen = true;
+  contentMargin = 240;
 
   mouseOver(){
     this.isMenuOpen=true;
+    this.contentMargin = 16;
   }
   mouseOut(){
       this.isMenuOpen=false;
+      this.contentMargin = 4;
   }
 
   
