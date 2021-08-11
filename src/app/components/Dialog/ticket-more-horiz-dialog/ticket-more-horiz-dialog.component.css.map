@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,SAAS,CAAC,MAAM,AAAA,cAAc,CAAC;EAC3B,WAAW,EAAE,IAAI;CACpB",
+    "sources": [
+        "ticket-more-horiz-dialog.component.scss"
+    ],
+    "names": [],
+    "file": "ticket-more-horiz-dialog.component.css"
+}

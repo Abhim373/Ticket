@@ -1,0 +1,13 @@
+.dialog{
+    display: flex;
+    &__user{
+        display: flex;
+        align-items: center;
+        &__icon{
+            display: flex;
+        }
+        &__text{
+            display: flex;
+        }
+    }
+}

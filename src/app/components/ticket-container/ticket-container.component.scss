@@ -1,8 +1,17 @@
+$text-color:(
+    "counter":#4B80E3,
+    "urgent":crimson,
+    "high": red,
+    "medium": orange,
+    "moving": purple
+    );
+
 .ticket{
     display: flex;
     flex-direction: column;
     padding: 1rem;
     margin: 1rem;
+    // border: 1px solid red;
 
     &__header{
         display: flex;
@@ -39,14 +48,8 @@
         
         &__h1,&__h2, &__h3,&__h4, 
         &__h5, &__h6,&__h7, &__h8{
-            // display: flex;
-            // // border: 1px solid  green;
             padding: 0 1rem 0 0;
-            // justify-content: space-between;
-
             display: flex;
-            // border: 1px solid  green;
-            // padding: 0 0 0 1rem;
             justify-content: space-between;
             align-items: center;
             align-content: center;
@@ -62,42 +65,21 @@
         &__h1{
             margin-left: 0;
         }
-        // &__h3{
-        //     display: flex;
-        //     width: 20rem;
-        // }
-        // &__h4{
-        //     display: flex;
-        //     margin-left: 1rem;
-        //     width: 20rem;
-        // }
-        // &__h5{
-        //     display: flex;
-        //     margin-left: 1rem;
-        //     align-items: center;
-        //     color: violet;
-        //     width: 20rem;
-        // }
-        // &__h6{
-        //     display: flex;
-        //     margin-left: 1rem;
-        //     align-items: center;
-        //     color: #E3E31F;
-        //     width: 20rem;
-        // }
-        // &__h7{
-        //     display: flex;
-        //     margin-left: 1rem;
-        //     align-items: center;
-        // }
-        // &__text1{
-        //     display: flex;
-        //     width: auto;
-        // }
-        // &__text2{
-        //     display: flex;
-        // }   
-
+        &__h5{
+            &__icon{
+                color:map-get($text-color,'moving');
+            }
+        } 
+        &__h6{
+            &__icon{
+                color:map-get($text-color,'medium');
+            }
+        } 
+        &__h7{
+            &__icon{
+                color:grey;
+            }
+        } 
     }
 
     &__content{
@@ -119,7 +101,9 @@
     &__footer{
         display: flex;
         flex-direction: row;
-        margin-bottom: 1rem;
+        height: 4rem;
+        background-color: #F6F7F8;
+        // border: 1px solid red;
 
         &__box1{
             display: flex;
@@ -153,16 +137,43 @@
             overflow: hidden;
             white-space: nowrap;
         }
-        // &__f7{
-        //     display: inline-block; 
-        //     text-overflow: ellipsis;
-        //     width: calc(80%); 
-        //     min-width: 0;
-        //     overflow: hidden;
-        //     white-space: nowrap;
-        // }
+        &__f4{
+            &__icon{
+                color:map-get($text-color,'counter');
+            }
+        } 
+        &__f5{
+            cursor: pointer;
+            &__icon{
+                color:map-get($text-color,'high');
+            }
+            &__menu-high{
+                color:map-get($text-color,'high');
+            }
+            &__menu-urgent{
+                color:map-get($text-color,'urgent');
+            }
+            &__menu-medium{
+                color:map-get($text-color,'medium');
+            }
+        }
+        &__f6{
+            cursor: pointer;
+            &__icon{
+                color:map-get($text-color,'urgent');
+            }
+        }
+        &__f7{
+            &__icon{
+                color:map-get($text-color,'medium');
+            }
+        } 
+        &__f8__btn.mat-button{
+           border-radius: 1rem;
+        }             
+    }  
+}
 
-        
-    }
-   
+.mat-icon {
+    vertical-align: middle;
 }

@@ -12,6 +12,8 @@ import { TicketContainerComponent } from './components/ticket-container/ticket-c
 import { TicketMoreDialogComponent } from './components/Dialog/ticket-more-dialog/ticket-more-dialog.component';
 import { TicketMoreHorizDialogComponent } from './components/Dialog/ticket-more-horiz-dialog/ticket-more-horiz-dialog.component';
 import { TicketUserDialogComponent } from './components/Dialog/ticket-user-dialog/ticket-user-dialog.component';
+import { CrmDialogComponent } from './components/Dialog/crm-dialog/crm-dialog.component';
+import { CardIssueDialogComponent } from './components/Dialog/card-issue-dialog/card-issue-dialog.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { TicketUserDialogComponent } from './components/Dialog/ticket-user-dialo
     TicketContainerComponent,
     TicketMoreDialogComponent,
     TicketMoreHorizDialogComponent,
-    TicketUserDialogComponent
+    TicketUserDialogComponent,
+    CrmDialogComponent,
+    CardIssueDialogComponent
   ],
   imports: [
     BrowserModule,

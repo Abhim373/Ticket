@@ -14,6 +14,11 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatMenuModule} from '@angular/material/menu';
+import {OverlayModule} from '@angular/cdk/overlay';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatBadgeModule} from '@angular/material/badge';
+import {ScrollingModule} from '@angular/cdk/scrolling';
+
 
 
 const material=[
@@ -31,6 +36,10 @@ const material=[
   MatChipsModule,
   MatDialogModule,
   MatMenuModule,
+  OverlayModule,
+  MatSlideToggleModule,
+  MatBadgeModule,
+  ScrollingModule,
   MatTabsModule
 ]
 

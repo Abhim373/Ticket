@@ -93,6 +93,18 @@
   margin-left: 0;
 }
 
+.ticket__header__h5__icon {
+  color: purple;
+}
+
+.ticket__header__h6__icon {
+  color: orange;
+}
+
+.ticket__header__h7__icon {
+  color: grey;
+}
+
 .ticket__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -127,7 +139,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-bottom: 1rem;
+  height: 4rem;
+  background-color: #F6F7F8;
 }
 
 .ticket__footer__box1 {
@@ -177,5 +190,49 @@
   min-width: 0;
   overflow: hidden;
   white-space: nowrap;
+}
+
+.ticket__footer__f4__icon {
+  color: #4B80E3;
+}
+
+.ticket__footer__f5 {
+  cursor: pointer;
+}
+
+.ticket__footer__f5__icon {
+  color: red;
+}
+
+.ticket__footer__f5__menu-high {
+  color: red;
+}
+
+.ticket__footer__f5__menu-urgent {
+  color: crimson;
+}
+
+.ticket__footer__f5__menu-medium {
+  color: orange;
+}
+
+.ticket__footer__f6 {
+  cursor: pointer;
+}
+
+.ticket__footer__f6__icon {
+  color: crimson;
+}
+
+.ticket__footer__f7__icon {
+  color: orange;
+}
+
+.ticket__footer__f8__btn.mat-button {
+  border-radius: 1rem;
+}
+
+.mat-icon {
+  vertical-align: middle;
 }
 /*# sourceMappingURL=ticket-container.component.css.map */

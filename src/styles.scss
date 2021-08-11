@@ -8,6 +8,8 @@ body {
     font-family: Roboto, Arial, sans-serif;
     padding: 0;
     margin: 0;
+    max-width: 100vh;
+    overflow-y: scroll;
 }
 
 $primary-color:#2d3e5c;
@@ -17,6 +19,7 @@ $hover-color:#185EDF;
 
 .sidenavContainer{
     display: flex;
+    flex:1 1 0;
 }
  
 .sidenav {
@@ -24,7 +27,8 @@ $hover-color:#185EDF;
     justify-content: center;
     flex-direction: column;
     width: 16rem;
-    overflow-x: hidden;
+    height: auto;
+    // overflow-x: hidden;
     background: $primary-color;
     border-radius: 0 1rem 1rem 0;
     
@@ -41,6 +45,46 @@ $hover-color:#185EDF;
             width: 10rem;
             height: 3rem;
             margin-left: 1.5rem;
+        }
+    }
+
+    &__brand-header{
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid black;
+        &__b1{
+            display: flex;
+            flex-direction: row;
+
+            &__brand{
+                margin: 1rem;
+                color:$text-color;
+            }
+            &__seeAll{
+                margin: 1rem;
+                color:$text-color;
+                margin-left: auto;
+            }
+            &__seeAll:hover{
+                color: white;
+            }
+        }
+        &__b2{
+            display: flex;
+            flex-direction: row;
+            &__icon1{
+                margin: 1rem;
+                color:$text-color;
+            }
+            &__text{
+                margin: 1rem 0 0 1rem;
+                color:$text-color;
+            }
+            &__icon2{
+                margin: 1rem;
+                color:$text-color;
+                margin-left: auto;
+            }
         }
     }
 
@@ -90,8 +134,11 @@ $hover-color:#185EDF;
 
         &__button{
             color: $text-color;
-            border-color:1rem solid $text-color;
+            border:1px solid $text-color !important;
             width: 12rem;
+        }
+        &__icon{
+            color: $text-color;
         }
     }
 }
@@ -99,10 +146,12 @@ $hover-color:#185EDF;
 #sidenav.menu-close {
     width: 4rem;
     border-radius: 0;
+    transition: all 0.5s ease 0s;
 }
 
 #sidenav.menu-open {
     width: 16rem;
+    transition: all 0.5s ease 0s;
     
 }
 .avatar {

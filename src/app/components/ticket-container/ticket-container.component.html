@@ -7,7 +7,16 @@
             src="../../../assets/imgs/twitter.png" alt="Photo of a Shiba Inu">    
         <span class="ticket__header__text1"><i>&nbsp; Public Tweet</i></span>
       </div>
-      <div class="ticket__header__h2" (mouseover)="openDialog()"  >
+      <div class="ticket__header__h2" (mouseover)="isOpenUser=true" (mouseout)="isOpenUser=false" cdkOverlayOrigin #trigger="cdkOverlayOrigin" >
+        
+        <ng-template
+            cdkConnectedOverlay
+            [cdkConnectedOverlayOrigin]="trigger"
+            [cdkConnectedOverlayOpen]="isOpenUser"
+            >
+            <app-ticket-user-dialog></app-ticket-user-dialog>     
+        </ng-template>
+
         <img mat-card-avatar 
             class="ticket__header__icon" 
             src="http://i.pravatar.cc/300" alt="Photo of a Shiba Inu">
@@ -33,14 +42,14 @@
         </mat-chip>
       </div>
       <div class="ticket__header__h5">
-        <mat-icon>moving</mat-icon>
+        <mat-icon class="ticket__header__h5__icon">moving</mat-icon>
       </div>
       <div class="ticket__header__h6">
-        <mat-icon>alarm</mat-icon>
+        <mat-icon class="ticket__header__h6__icon">alarm</mat-icon>
         &nbsp;&nbsp;{{today | date: 'h:mm'}}
       </div>
       <div class="ticket__header__h7">
-        <mat-icon>watch_later</mat-icon>
+        <mat-icon class="ticket__header__h7__icon">watch_later</mat-icon>
         &nbsp;&nbsp;5M
       </div>
       <!-- <div class="ticket__header__h8"></div> -->
@@ -58,9 +67,11 @@
                 <img src="../../../assets/imgs/ticketImg.jpg" alt="Photo of a Shiba Inu">
             </div>
         </div>
-      <mat-divider></mat-divider>
+      
     </mat-card-content>
+    
     <mat-card-footer>
+        <mat-divider></mat-divider>
         <div class="ticket__footer">
             <div class="ticket__footer__box1">
             <div class="ticket__footer__f1">
@@ -70,43 +81,67 @@
                 <button mat-icon-button aria-label=" vertical three dot icon">
                     <mat-icon>local_activity</mat-icon>
                 </button>
-                <span>&nbsp; 83481</span>
+                <span>&nbsp;83481</span>
             </div>
             <div class="ticket__footer__f3">
                 <button mat-icon-button aria-label=" vertical three dot icon">
                     <mat-icon>question_answer</mat-icon>
                 </button>
-                <span>&nbsp; 24</span>
+                <span>&nbsp;24</span>
             </div>
             <div class="ticket__footer__f4">
-                <button mat-icon-button aria-label=" vertical three dot icon">
+                <button mat-icon-button class="ticket__footer__f4__icon">
                     <mat-icon>folder_open</mat-icon>
                 </button>
                 <span>&nbsp;Open</span>
             </div>
-            <div class="ticket__footer__f5">
-                <button mat-icon-button aria-label=" vertical three dot icon">
-                    <mat-icon>low_priority</mat-icon>
-                </button>
-                <span>&nbsp;High</span>
+            <div class="ticket__footer__f5" [matMenuTriggerFor]="menu">
+                <mat-icon class="ticket__footer__f5__icon">low_priority</mat-icon>
+                <span>&nbsp;&nbsp;High</span>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item>
+                        <mat-icon class="ticket__footer__f5__menu-urgent">low_priority</mat-icon>
+                        <span>Urgent</span>
+                    </button>
+                    <button mat-menu-item>
+                        <mat-icon class="ticket__footer__f5__menu-high">low_priority</mat-icon>
+                        <span>High</span>
+                    </button>
+                    <button mat-menu-item>
+                        <mat-icon class="ticket__footer__f5__menu-medium">low_priority</mat-icon>
+                        <span>Medium</span>
+                    </button>
+                    <button mat-menu-item>
+                        <mat-icon>low_priority</mat-icon>
+                        <span>Low</span>
+                    </button>
+                </mat-menu>  
             </div>
-            <div class="ticket__footer__f6">
-                <button mat-icon-button aria-label=" vertical three dot icon">
-                    <mat-icon>local_activity</mat-icon>
-                </button>
-                <span>&nbsp;Card Issue</span>
+            <div class="ticket__footer__f6" (click)="openDialogCardIssue()">
+                <mat-icon class="ticket__footer__f6__icon">local_activity</mat-icon>
+                <span>&nbsp;&nbsp;Card Issue</span>
             </div>
             <div class="ticket__footer__f7">
-                <button mat-icon-button aria-label=" vertical three dot icon">
-                    <mat-icon>local_activity</mat-icon>
+                <button mat-icon-button class="ticket__footer__f7__icon">
+                    <mat-icon>chat</mat-icon>
                 </button>
                 <span class="ticket__footer__f7__text">&nbsp;Brand Mentioned</span>  
             </div>
             <div class="ticket__footer__f8">
-                <span class="ticket__footer__f8__text">CRM</span>
+                <button mat-button class="ticket__footer__f8__btn">
+                    <span >CRM</span>
+                </button>
+                
             </div>
-            <div class="ticket__footer__f9">
-                <button mat-icon-button aria-label=" vertical three dot icon">
+            <div class="ticket__footer__f9" (mouseover)="isOpenMore=true" (mouseout)="isOpenMore=false" cdkOverlayOrigin #triggerMore="cdkOverlayOrigin">
+                <ng-template
+                    cdkConnectedOverlay
+                    [cdkConnectedOverlayOrigin]="triggerMore"
+                    [cdkConnectedOverlayOpen]="isOpenMore"
+                    >
+                    <app-ticket-more-dialog></app-ticket-more-dialog>    
+                </ng-template>
+                <button mat-icon-button>
                     <mat-icon>more</mat-icon>
                 </button>
             </div>
@@ -133,12 +168,15 @@
                 </button>
             </div>
             <div class="ticket__footer__f14">
-                <button mat-icon-button aria-label=" vertical three dot icon">
+                <button mat-icon-button [matMenuTriggerFor]="belowMenu" #menuTrigger>
                     <mat-icon>more_horiz</mat-icon>
                 </button>
+                <mat-menu #belowMenu="matMenu" yPosition="below">
+                    <app-ticket-more-horiz-dialog></app-ticket-more-horiz-dialog>
+                </mat-menu>
             </div>
         </div>
-        </div>
+    </div>
     </mat-card-footer>
   </mat-card>
   

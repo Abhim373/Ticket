@@ -17,11 +17,21 @@ fullscreen>
   [class.menu-close]="!isMenuOpen"
   opened>
 
-  <div class="sidenav__header"><mat-icon
-    
-    id="toolbarMenu" class="menu-item">subject</mat-icon>
+  <div class="sidenav__header">
+    <mat-icon class="menu-item">subject</mat-icon>
     <img class="sidenav__header__logo" src="../../../assets/imgs/logo.png">
   </div>
+  <!-- <div class="sidenav__brand-header">
+    <div class="sidenav__brand-header__b1">
+      <span class="sidenav__brand-header__b1__brand" *ngIf="isMenuOpen">Brand</span>
+      <span class="sidenav__brand-header__b1__seeAll" *ngIf="isMenuOpen">See All</span>
+    </div>
+    <div class="sidenav__brand-header__b2">
+      <mat-icon class="sidenav__brand-header__b2__icon1">hdr_auto</mat-icon>
+       <span class="sidenav__brand-header__b2__text"><i>Not Applicable</i></span>
+      <mat-icon class="sidenav__brand-header__b2__icon2">arrow_drop_down</mat-icon>
+    </div>
+  </div> -->
  
   <mat-list id="menus" class="sidenav_menus">
 
@@ -136,11 +146,12 @@ fullscreen>
 
   </mat-list>
 
-  <div class="sidenav__compose">
-    <button class="sidenav__compose__button" mat-stroked-button>
+  <div class="sidenav__compose" >
+    <button class="sidenav__compose__button" mat-stroked-button *ngIf="isMenuOpen">
       <mat-icon >edit</mat-icon>
-      <span class="compose__text">Compose</span>
+      <span class="compose__text">&nbsp;Compose</span>
     </button>
+    <mat-icon class="sidenav__compose__icon" *ngIf="!isMenuOpen">edit</mat-icon>
   </div>
 
   <mat-card>
