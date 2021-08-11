@@ -32,7 +32,7 @@ fullscreen>
       <mat-icon class="sidenav__brand-header__b2__icon2">arrow_drop_down</mat-icon>
     </div>
   </div> -->
- 
+<div class="sidenav__menus">
   <mat-list id="menus" class="sidenav_menus">
 
     <mat-list-item>
@@ -145,7 +145,9 @@ fullscreen>
       </mat-list-item>
 
   </mat-list>
-
+</div>
+  
+<div class="sidenav__footer">
   <div class="sidenav__compose" >
     <button class="sidenav__compose__button" mat-stroked-button *ngIf="isMenuOpen">
       <mat-icon >edit</mat-icon>
@@ -153,21 +155,17 @@ fullscreen>
     </button>
     <mat-icon class="sidenav__compose__icon" *ngIf="!isMenuOpen">edit</mat-icon>
   </div>
-
   <mat-card>
-
     <mat-card-header>
-    
       <div 
         mat-card-avatar 
         class="avatar">
       </div>
-
       <mat-card-title>John Doe</mat-card-title>
       <mat-card-subtitle>Internal</mat-card-subtitle>
-
     </mat-card-header>
   </mat-card>
+</div>
 
   
 </mat-sidenav>

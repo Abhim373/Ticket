@@ -40,6 +40,7 @@ $hover-color:#185EDF;
         align-items: center;
         border-bottom: 1px solid black;
         padding: 0 1.5rem;
+        // border: 1px solid yellow;
 
         &__logo{
             width: 10rem;
@@ -89,6 +90,8 @@ $hover-color:#185EDF;
     }
 
     &__menus{
+        display: flex;
+        // border: 1px solid palegreen;
         &__list{
           width: 15rem;
           // border: 1px solid red;
@@ -123,10 +126,19 @@ $hover-color:#185EDF;
       background: $hover-color;
     }
 
-    
+    &__footer{
+        display: flex;
+        margin: 4rem 0 0 0;
+        // margin-bottom:auto;
+        align-self: flex-end;
+        flex-direction: column;
+        // border: 1px solid red;
+
+    }
     &__compose{
         display: flex;
-        margin: 8rem 0 0 0;
+        // margin: 8rem 0 0 0;
+        margin-bottom: auto;
         background-color: $primary-color;
         height: 2rem;
         width: 100%;
