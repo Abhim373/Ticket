@@ -1,44 +1,63 @@
 <mat-card class="ticket">
-    <mat-card-header class="ticket__header">
-        <div class="ticket__header__box1">
+  <mat-card-header class="ticket__header">
+    <div class="ticket__header__box1">
       <div class="ticket__header__h1">
-        <img mat-card-avatar 
-            class="ticket__header__icon" 
-            src="../../../assets/imgs/twitter.png" alt="Photo of a Shiba Inu">    
+        <img
+          mat-card-avatar
+          class="ticket__header__icon"
+          src="../../../assets/imgs/twitter.png"
+          alt="Photo of a Shiba Inu"
+        />
         <span class="ticket__header__text1"><i>&nbsp; Public Tweet</i></span>
       </div>
-      <div class="ticket__header__h2" (mouseover)="isOpenUser=true" (mouseout)="isOpenUser=false" cdkOverlayOrigin #trigger="cdkOverlayOrigin" >
-        
+      <div
+        class="ticket__header__h2"
+        (mouseover)="isOpenUser = true"
+        (mouseout)="isOpenUser = false"
+        cdkOverlayOrigin
+        #trigger="cdkOverlayOrigin"
+      >
         <ng-template
-            cdkConnectedOverlay
-            [cdkConnectedOverlayOrigin]="trigger"
-            [cdkConnectedOverlayOpen]="isOpenUser"
-            >
-            <app-ticket-user-dialog></app-ticket-user-dialog>     
+          cdkConnectedOverlay
+          [cdkConnectedOverlayOrigin]="trigger"
+          [cdkConnectedOverlayOpen]="isOpenUser"
+        >
+          <app-ticket-user-dialog></app-ticket-user-dialog>
         </ng-template>
 
-        <img mat-card-avatar 
-            class="ticket__header__icon" 
-            src="http://i.pravatar.cc/300" alt="Photo of a Shiba Inu">
-        <span class="ticket__header__text2"><strong>&nbsp; Andreu Mole</strong>&nbsp; (@annadiasolva)&nbsp;</span>
-        <img mat-card-avatar 
-            class="ticket__header__icon" 
-            src="../../../assets/imgs/success.png" alt="Photo of a Shiba Inu">     
+        <img
+          mat-card-avatar
+          class="ticket__header__icon"
+          src="http://i.pravatar.cc/300"
+          alt="Photo of a Shiba Inu"
+        />
+        <span class="ticket__header__text2"
+          ><strong>&nbsp; Andreu Mole</strong>&nbsp; (@annadiasolva)&nbsp;</span
+        >
+        <img
+          mat-card-avatar
+          class="ticket__header__icon"
+          src="../../../assets/imgs/success.png"
+          alt="Photo of a Shiba Inu"
+        />
       </div>
     </div>
     <div class="ticket__header__box2">
       <div class="ticket__header__h3">
         <mat-chip>
-        <mat-icon>person_add</mat-icon>
-            &nbsp; John Doe
+          <mat-icon>person_add</mat-icon>
+          &nbsp; John Doe
         </mat-chip>
       </div>
       <div class="ticket__header__h4">
         <mat-chip>
-            <img mat-card-avatar 
-            class="ticket__header__icon" 
-            src="../../../assets/imgs/sbi.png" alt="Photo of a Shiba Inu">
-            &nbsp;State Bank of India
+          <img
+            mat-card-avatar
+            class="ticket__header__icon"
+            src="../../../assets/imgs/sbi.png"
+            alt="Photo of a Shiba Inu"
+          />
+          &nbsp;State Bank of India
         </mat-chip>
       </div>
       <div class="ticket__header__h5">
@@ -46,7 +65,7 @@
       </div>
       <div class="ticket__header__h6">
         <mat-icon class="ticket__header__h6__icon">alarm</mat-icon>
-        &nbsp;&nbsp;{{today | date: 'h:mm'}}
+        &nbsp;&nbsp;{{ today | date: "h:mm" }}
       </div>
       <div class="ticket__header__h7">
         <mat-icon class="ticket__header__h7__icon">watch_later</mat-icon>
@@ -54,129 +73,141 @@
       </div>
       <!-- <div class="ticket__header__h8"></div> -->
     </div>
-    </mat-card-header>
-    <mat-card-content>
+  </mat-card-header>
+  <mat-card-content>
     <mat-divider></mat-divider>
-        <div class="ticket__content">
-            <div class="ticket__content__text">
-                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                    bred for hunting.
-            </div>
-            <div class="ticket__content__image" *ngIf='imgUrl'>
-                <img src="../../../assets/imgs/ticketImg.jpg" alt="Photo of a Shiba Inu">
-            </div>
-        </div>
-      
-    </mat-card-content>
-    
-    <mat-card-footer>
-        <mat-divider></mat-divider>
-        <div class="ticket__footer">
-            <div class="ticket__footer__box1">
-            <div class="ticket__footer__f1">
-                <mat-checkbox></mat-checkbox>
-            </div>
-            <div class="ticket__footer__f2">
-                <button mat-icon-button aria-label=" vertical three dot icon">
-                    <mat-icon>local_activity</mat-icon>
-                </button>
-                <span>&nbsp;83481</span>
-            </div>
-            <div class="ticket__footer__f3">
-                <button mat-icon-button aria-label=" vertical three dot icon">
-                    <mat-icon>question_answer</mat-icon>
-                </button>
-                <span>&nbsp;24</span>
-            </div>
-            <div class="ticket__footer__f4">
-                <button mat-icon-button class="ticket__footer__f4__icon">
-                    <mat-icon>folder_open</mat-icon>
-                </button>
-                <span>&nbsp;Open</span>
-            </div>
-            <div class="ticket__footer__f5" [matMenuTriggerFor]="menu">
-                <mat-icon class="ticket__footer__f5__icon">low_priority</mat-icon>
-                <span>&nbsp;&nbsp;High</span>
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item>
-                        <mat-icon class="ticket__footer__f5__menu-urgent">low_priority</mat-icon>
-                        <span>Urgent</span>
-                    </button>
-                    <button mat-menu-item>
-                        <mat-icon class="ticket__footer__f5__menu-high">low_priority</mat-icon>
-                        <span>High</span>
-                    </button>
-                    <button mat-menu-item>
-                        <mat-icon class="ticket__footer__f5__menu-medium">low_priority</mat-icon>
-                        <span>Medium</span>
-                    </button>
-                    <button mat-menu-item>
-                        <mat-icon>low_priority</mat-icon>
-                        <span>Low</span>
-                    </button>
-                </mat-menu>  
-            </div>
-            <div class="ticket__footer__f6" (click)="openDialogCardIssue()">
-                <mat-icon class="ticket__footer__f6__icon">local_activity</mat-icon>
-                <span>&nbsp;&nbsp;Card Issue</span>
-            </div>
-            <div class="ticket__footer__f7">
-                <button mat-icon-button class="ticket__footer__f7__icon">
-                    <mat-icon>chat</mat-icon>
-                </button>
-                <span class="ticket__footer__f7__text">&nbsp;Brand Mentioned</span>  
-            </div>
-            <div class="ticket__footer__f8">
-                <button mat-button class="ticket__footer__f8__btn">
-                    <span >CRM</span>
-                </button>
-                
-            </div>
-            <div class="ticket__footer__f9" (mouseover)="isOpenMore=true" (mouseout)="isOpenMore=false" cdkOverlayOrigin #triggerMore="cdkOverlayOrigin">
-                <ng-template
-                    cdkConnectedOverlay
-                    [cdkConnectedOverlayOrigin]="triggerMore"
-                    [cdkConnectedOverlayOpen]="isOpenMore"
-                    >
-                    <app-ticket-more-dialog></app-ticket-more-dialog>    
-                </ng-template>
-                <button mat-icon-button>
-                    <mat-icon>more</mat-icon>
-                </button>
-            </div>
-        </div>
-        <div class="ticket__footer__box2">
-            <div class="ticket__footer__f10">
-                <button mat-icon-button aria-label=" vertical three dot icon">
-                    <mat-icon>open_in_new</mat-icon>
-                </button>
-            </div>
-            <div class="ticket__footer__f11">
-                <button mat-icon-button aria-label=" vertical three dot icon">
-                    <mat-icon>highlight_off</mat-icon>
-                </button>
-            </div>
-            <div class="ticket__footer__f12">
-                <button mat-icon-button aria-label=" vertical three dot icon">
-                    <mat-icon>visibility</mat-icon>
-                </button>
-            </div>
-            <div class="ticket__footer__f13">
-                <button mat-icon-button aria-label=" vertical three dot icon">
-                    <mat-icon>reply</mat-icon>
-                </button>
-            </div>
-            <div class="ticket__footer__f14">
-                <button mat-icon-button [matMenuTriggerFor]="belowMenu" #menuTrigger>
-                    <mat-icon>more_horiz</mat-icon>
-                </button>
-                <mat-menu #belowMenu="matMenu" yPosition="below">
-                    <app-ticket-more-horiz-dialog></app-ticket-more-horiz-dialog>
-                </mat-menu>
-            </div>
-        </div>
+    <div class="ticket__content">
+      <div class="ticket__content__text">
+        The Shiba Inu is the smallest of the six original and distinct spitz
+        breeds of dog from Japan. A small, agile dog that copes very well with
+        mountainous terrain, the Shiba Inu was originally bred for hunting.
+      </div>
+      <div class="ticket__content__image" *ngIf="imgUrl">
+        <img
+          src="../../../assets/imgs/ticketImg.jpg"
+          alt="Photo of a Shiba Inu"
+        />
+      </div>
     </div>
-    </mat-card-footer>
-  </mat-card>
-  
+  </mat-card-content>
+
+  <mat-card-footer>
+    <mat-divider></mat-divider>
+    <div class="ticket__footer">
+      <div class="ticket__footer__box1">
+        <div class="ticket__footer__f1">
+          <mat-checkbox></mat-checkbox>
+        </div>
+        <div class="ticket__footer__f2">
+          <button mat-icon-button aria-label=" vertical three dot icon">
+            <mat-icon>local_activity</mat-icon>
+          </button>
+          <span>&nbsp;83481</span>
+        </div>
+        <div class="ticket__footer__f3">
+          <button mat-icon-button aria-label=" vertical three dot icon">
+            <mat-icon>question_answer</mat-icon>
+          </button>
+          <span>&nbsp;24</span>
+        </div>
+        <div class="ticket__footer__f4">
+          <button mat-icon-button class="ticket__footer__f4__icon">
+            <mat-icon>folder_open</mat-icon>
+          </button>
+          <span>&nbsp;Open</span>
+        </div>
+        <div class="ticket__footer__f5" [matMenuTriggerFor]="menu">
+          <mat-icon class="ticket__footer__f5__icon">low_priority</mat-icon>
+          <span>&nbsp;&nbsp;High</span>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon class="ticket__footer__f5__menu-urgent"
+                >low_priority</mat-icon
+              >
+              <span>Urgent</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon class="ticket__footer__f5__menu-high"
+                >low_priority</mat-icon
+              >
+              <span>High</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon class="ticket__footer__f5__menu-medium"
+                >low_priority</mat-icon
+              >
+              <span>Medium</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>low_priority</mat-icon>
+              <span>Low</span>
+            </button>
+          </mat-menu>
+        </div>
+        <div class="ticket__footer__f6" (click)="openDialogCardIssue()">
+          <mat-icon class="ticket__footer__f6__icon">local_activity</mat-icon>
+          <span>&nbsp;&nbsp;Card Issue</span>
+        </div>
+        <div class="ticket__footer__f7">
+          <button mat-icon-button class="ticket__footer__f7__icon">
+            <mat-icon>chat</mat-icon>
+          </button>
+          <span class="ticket__footer__f7__text">&nbsp;Brand Mentioned</span>
+        </div>
+        <div class="ticket__footer__f8">
+          <button mat-button class="ticket__footer__f8__btn">
+            <span>CRM</span>
+          </button>
+        </div>
+        <div
+          class="ticket__footer__f9"
+          (mouseover)="isOpenMore = true"
+          (mouseout)="isOpenMore = false"
+          cdkOverlayOrigin
+          #triggerMore="cdkOverlayOrigin"
+        >
+          <ng-template
+            cdkConnectedOverlay
+            [cdkConnectedOverlayOrigin]="triggerMore"
+            [cdkConnectedOverlayOpen]="isOpenMore"
+          >
+            <app-ticket-more-dialog></app-ticket-more-dialog>
+          </ng-template>
+          <button mat-icon-button>
+            <mat-icon>more</mat-icon>
+          </button>
+        </div>
+      </div>
+      <div class="ticket__footer__box2">
+        <div class="ticket__footer__f10">
+          <button mat-icon-button aria-label=" vertical three dot icon">
+            <mat-icon>open_in_new</mat-icon>
+          </button>
+        </div>
+        <div class="ticket__footer__f11">
+          <button mat-icon-button aria-label=" vertical three dot icon">
+            <mat-icon>highlight_off</mat-icon>
+          </button>
+        </div>
+        <div class="ticket__footer__f12">
+          <button mat-icon-button aria-label=" vertical three dot icon">
+            <mat-icon>visibility</mat-icon>
+          </button>
+        </div>
+        <div class="ticket__footer__f13">
+          <button mat-icon-button aria-label=" vertical three dot icon">
+            <mat-icon>reply</mat-icon>
+          </button>
+        </div>
+        <div class="ticket__footer__f14">
+          <button mat-icon-button [matMenuTriggerFor]="belowMenu" #menuTrigger>
+            <mat-icon>more_horiz</mat-icon>
+          </button>
+          <mat-menu #belowMenu="matMenu" yPosition="below">
+            <app-ticket-more-horiz-dialog></app-ticket-more-horiz-dialog>
+          </mat-menu>
+        </div>
+      </div>
+    </div>
+  </mat-card-footer>
+</mat-card>

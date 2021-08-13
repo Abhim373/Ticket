@@ -1,4 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+// /* You can add global styles to this file, and also import other style files */
+// @import './assets/styles/config'; 
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
@@ -6,6 +7,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 body {
     font-family: Roboto, Arial, sans-serif;
+    font-size: fontSz('large');
     padding: 0;
     margin: 0;
     max-width: 100vh;
@@ -31,6 +33,7 @@ $hover-color:#185EDF;
     // overflow-x: hidden;
     background: $primary-color;
     border-radius: 0 1rem 1rem 0;
+    transition: all 0.5s ease 0s;
     
 
     &__header{
@@ -124,6 +127,7 @@ $hover-color:#185EDF;
     &__menu-item:hover{
       color: white;
       background: $hover-color;
+      transition: all 0.5s ease 0s;
     }
 
     &__footer{
@@ -133,24 +137,28 @@ $hover-color:#185EDF;
         align-self: flex-end;
         flex-direction: column;
         // border: 1px solid red;
+        transition: all 0.5s ease 0s;
 
     }
     &__compose{
         display: flex;
         // margin: 8rem 0 0 0;
         margin-bottom: auto;
-        background-color: $primary-color;
+        background-color: bgCol("sidenav-bg");
         height: 2rem;
         width: 100%;
         justify-content: center;
+        transition: all 0.5s ease 0s;
 
         &__button{
             color: $text-color;
             border:1px solid $text-color !important;
             width: 12rem;
+            transition: all 0.5s ease 0s;
         }
         &__icon{
             color: $text-color;
+            transition: all 0.5s ease 0s;
         }
     }
 }
@@ -178,6 +186,7 @@ $hover-color:#185EDF;
 
 #sidenav .mat-drawer-inner-container{
     overflow: hidden;
+    transition: all 0.5s ease 0s;
 }
 
 #sidenav .mat-card{

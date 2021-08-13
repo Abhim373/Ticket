@@ -1,4 +1,3 @@
-
 <mat-sidenav-container
 id="sidenavContainer"
 class="sidenavContainer"  
@@ -17,59 +16,34 @@ fullscreen>
   [class.menu-close]="!isMenuOpen"
   opened>
 
-  <div class="sidenav__header">
-    <mat-icon class="menu-item">subject</mat-icon>
-    <img class="sidenav__header__logo" src="../../../assets/imgs/logo.png">
-  </div>
-  <!-- <div class="sidenav__brand-header">
-    <div class="sidenav__brand-header__b1">
-      <span class="sidenav__brand-header__b1__brand" *ngIf="isMenuOpen">Brand</span>
-      <span class="sidenav__brand-header__b1__seeAll" *ngIf="isMenuOpen">See All</span>
+    <div class="sidenav__header">
+      <mat-icon class="menu-item">subject</mat-icon>
+      <img class="sidenav__header__logo" src="../../../assets/imgs/logo.png">
     </div>
-    <div class="sidenav__brand-header__b2">
-      <mat-icon class="sidenav__brand-header__b2__icon1">hdr_auto</mat-icon>
-       <span class="sidenav__brand-header__b2__text"><i>Not Applicable</i></span>
-      <mat-icon class="sidenav__brand-header__b2__icon2">arrow_drop_down</mat-icon>
-    </div>
-  </div> -->
-<div class="sidenav__menus">
-  <mat-list id="menus" class="sidenav_menus">
-
-    <mat-list-item>
-      <div class="sidenav__menus__list">
-        <button 
-          class="sidenav__menu-item"
-          mat-flat-button>
-          <mat-icon class="sidenav__menu-item__logo">dashboard_outline</mat-icon>
-          <span class="sidenav__menu-item__name">Dashboard</span>
-          <mat-icon class="sidenav__menu-item__pin">push_pin</mat-icon>
-        </button>
+    <!-- <div class="sidenav__brand-header">
+      <div class="sidenav__brand-header__b1">
+        <span class="sidenav__brand-header__b1__brand" *ngIf="isMenuOpen">Brand</span>
+        <span class="sidenav__brand-header__b1__seeAll" *ngIf="isMenuOpen">See All</span>
       </div>
-    </mat-list-item>
-
-    <mat-list-item>
-      <div class="sidenav__menus__list">
-        <button 
-          class="sidenav__menu-item"
-          mat-flat-button>
-          <mat-icon class="sidenav__menu-item__logo">assessment</mat-icon>
-          <span class="sidenav__menu-item__name">Analytics</span>
-          <mat-icon class="sidenav__menu-item__pin">push_pin</mat-icon>
-        </button>
+      <div class="sidenav__brand-header__b2">
+        <mat-icon class="sidenav__brand-header__b2__icon1">hdr_auto</mat-icon>
+        <span class="sidenav__brand-header__b2__text"><i>Not Applicable</i></span>
+        <mat-icon class="sidenav__brand-header__b2__icon2">arrow_drop_down</mat-icon>
       </div>
-    </mat-list-item>
+    </div> -->
+  <div class="sidenav__menus">
+    <mat-list id="menus" class="sidenav_menus">
 
-    <mat-list-item>
-      <div class="sidenav__menus__list">
-        <button 
-          class="sidenav__menu-item"
-          mat-flat-button>
-          <mat-icon class="sidenav__menu-item__logo">inbox</mat-icon>
-          <span class="sidenav__menu-item__name">Social Inbox</span>
-          <mat-icon class="sidenav__menu-item__pin">push_pin</mat-icon>
-        </button>
-      </div>
-
+      <mat-list-item>
+        <div class="sidenav__menus__list">
+          <button 
+            class="sidenav__menu-item"
+            mat-flat-button>
+            <mat-icon class="sidenav__menu-item__logo">dashboard_outline</mat-icon>
+            <span class="sidenav__menu-item__name">Dashboard</span>
+            <mat-icon class="sidenav__menu-item__pin">push_pin</mat-icon>
+          </button>
+        </div>
       </mat-list-item>
 
       <mat-list-item>
@@ -77,103 +51,123 @@ fullscreen>
           <button 
             class="sidenav__menu-item"
             mat-flat-button>
-            <mat-icon class="sidenav__menu-item__logo">event_note</mat-icon>
-            <span class="sidenav__menu-item__name">Reports</span>
+            <mat-icon class="sidenav__menu-item__logo">assessment</mat-icon>
+            <span class="sidenav__menu-item__name">Analytics</span>
             <mat-icon class="sidenav__menu-item__pin">push_pin</mat-icon>
           </button>
-      </div>
-      </mat-list-item>
-
-      <mat-list-item>
-        <div class="sidenav__menus__list">
-        <button 
-          class="sidenav__menu-item"
-          mat-flat-button>
-          <mat-icon class="sidenav__menu-item__logo">campaign</mat-icon>
-          <span class="sidenav__menu-item__name">Campaign</span>
-          <mat-icon class="sidenav__menu-item__pin">push_pin</mat-icon>
-        </button>
-      </div>
-      </mat-list-item>
-
-      <mat-list-item>
-        <div class="sidenav__menus__list">
-        <button 
-          class="sidenav__menu-item"
-          mat-flat-button> 
-          <mat-icon class="sidenav__menu-item__logo">mail_outline</mat-icon>
-          <span class="sidenav__menu-item__name">Email Marketing</span>
-          <mat-icon class="sidenav__menu-item__pin">push_pin</mat-icon>
-        </button>
         </div>
       </mat-list-item>
 
       <mat-list-item>
         <div class="sidenav__menus__list">
-        <button 
-          class="sidenav__menu-item"
-          mat-flat-button>
-          <mat-icon class="sidenav__menu-item__logo">calendar_today</mat-icon>
-          <span class="sidenav__menu-item__name">Calender</span>
-          <mat-icon class="sidenav__menu-item__pin">push_pin</mat-icon>
-        </button>
+          <button 
+            class="sidenav__menu-item"
+            mat-flat-button>
+            <mat-icon class="sidenav__menu-item__logo">inbox</mat-icon>
+            <span class="sidenav__menu-item__name">Social Inbox</span>
+            <mat-icon class="sidenav__menu-item__pin">push_pin</mat-icon>
+          </button>
         </div>
-      </mat-list-item>
 
-      <mat-list-item>
-        <div class="sidenav__menus__list">
-        <button 
-          class="sidenav__menu-item"
-          mat-flat-button>
-          <mat-icon class="sidenav__menu-item__logo">smart_toy</mat-icon>
-          <span class="sidenav__menu-item__name">Chatbot</span>
-          <mat-icon class="sidenav__menu-item__pin">push_pin</mat-icon>
-        </button>
+        </mat-list-item>
+
+        <mat-list-item>
+          <div class="sidenav__menus__list">
+            <button 
+              class="sidenav__menu-item"
+              mat-flat-button>
+              <mat-icon class="sidenav__menu-item__logo">event_note</mat-icon>
+              <span class="sidenav__menu-item__name">Reports</span>
+              <mat-icon class="sidenav__menu-item__pin">push_pin</mat-icon>
+            </button>
         </div>
-      </mat-list-item>
+        </mat-list-item>
 
-      <mat-list-item>
-        <div class="sidenav__menus__list">
-        <button 
-          class="sidenav__menu-item"
-          mat-flat-button>
-          <mat-icon class="sidenav__menu-item__logo">forum</mat-icon>
-          <span class="sidenav__menu-item__name">PR Dashboard</span>
-          <mat-icon class="sidenav__menu-item__pin">push_pin</mat-icon>
-         </button>
+        <mat-list-item>
+          <div class="sidenav__menus__list">
+          <button 
+            class="sidenav__menu-item"
+            mat-flat-button>
+            <mat-icon class="sidenav__menu-item__logo">campaign</mat-icon>
+            <span class="sidenav__menu-item__name">Campaign</span>
+            <mat-icon class="sidenav__menu-item__pin">push_pin</mat-icon>
+          </button>
         </div>
-      </mat-list-item>
+        </mat-list-item>
 
-  </mat-list>
-</div>
-  
-<div class="sidenav__footer">
-  <div class="sidenav__compose" >
-    <button class="sidenav__compose__button" mat-stroked-button *ngIf="isMenuOpen">
-      <mat-icon >edit</mat-icon>
-      <span class="compose__text">&nbsp;Compose</span>
-    </button>
-    <mat-icon class="sidenav__compose__icon" *ngIf="!isMenuOpen">edit</mat-icon>
+        <mat-list-item>
+          <div class="sidenav__menus__list">
+          <button 
+            class="sidenav__menu-item"
+            mat-flat-button> 
+            <mat-icon class="sidenav__menu-item__logo">mail_outline</mat-icon>
+            <span class="sidenav__menu-item__name">Email Marketing</span>
+            <mat-icon class="sidenav__menu-item__pin">push_pin</mat-icon>
+          </button>
+          </div>
+        </mat-list-item>
+
+        <mat-list-item>
+          <div class="sidenav__menus__list">
+          <button 
+            class="sidenav__menu-item"
+            mat-flat-button>
+            <mat-icon class="sidenav__menu-item__logo">calendar_today</mat-icon>
+            <span class="sidenav__menu-item__name">Calender</span>
+            <mat-icon class="sidenav__menu-item__pin">push_pin</mat-icon>
+          </button>
+          </div>
+        </mat-list-item>
+
+        <mat-list-item>
+          <div class="sidenav__menus__list">
+          <button 
+            class="sidenav__menu-item"
+            mat-flat-button>
+            <mat-icon class="sidenav__menu-item__logo">smart_toy</mat-icon>
+            <span class="sidenav__menu-item__name">Chatbot</span>
+            <mat-icon class="sidenav__menu-item__pin">push_pin</mat-icon>
+          </button>
+          </div>
+        </mat-list-item>
+
+        <mat-list-item>
+          <div class="sidenav__menus__list">
+          <button 
+            class="sidenav__menu-item"
+            mat-flat-button>
+            <mat-icon class="sidenav__menu-item__logo">forum</mat-icon>
+            <span class="sidenav__menu-item__name">PR Dashboard</span>
+            <mat-icon class="sidenav__menu-item__pin">push_pin</mat-icon>
+          </button>
+          </div>
+        </mat-list-item>
+
+    </mat-list>
   </div>
-  <mat-card>
-    <mat-card-header>
-      <div 
-        mat-card-avatar 
-        class="avatar">
-      </div>
-      <mat-card-title>John Doe</mat-card-title>
-      <mat-card-subtitle>Internal</mat-card-subtitle>
-    </mat-card-header>
-  </mat-card>
-</div>
+    
+  <div class="sidenav__footer">
+    <div class="sidenav__compose" >
+      <button class="sidenav__compose__button" mat-stroked-button *ngIf="isMenuOpen">
+        <mat-icon >edit</mat-icon>
+        <span class="compose__text">&nbsp;Compose</span>
+      </button>
+      <mat-icon class="sidenav__compose__icon" *ngIf="!isMenuOpen">edit</mat-icon>
+    </div>
+    <mat-card>
+      <mat-card-header>
+        <div mat-card-avatar class="avatar"></div>
+        <mat-card-title>John Doe</mat-card-title>
+        <mat-card-subtitle>Internal</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+  </div>
 
   
 </mat-sidenav>
-<mat-sidenav-content
-[ngStyle]="{ 'margin-left.rem': contentMargin }"
->
-<app-header></app-header>
-<app-ticket-container></app-ticket-container>
+<mat-sidenav-content [ngStyle]="{ 'margin-left.rem': contentMargin }">
+  <app-header></app-header>
+  <app-ticket-container></app-ticket-container>
 </mat-sidenav-content>
 
 </mat-sidenav-container>

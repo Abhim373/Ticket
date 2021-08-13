@@ -1,17 +1,12 @@
-$text-color:(
-    "counter":#4B80E3,
-    "urgent":crimson,
-    "high": red,
-    "medium": orange,
-    );
+
+@import '../../../assets/styles/config';
 
 .header{
     display: flex;
     flex-direction: column;
-    // width: 100%;
     background-color: white;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-    // margin: 4rem 0 0 0;
+    
     &__h1{
         display: flex;
         flex-direction: row;
@@ -21,54 +16,62 @@ $text-color:(
         &__box1{
             display: flex; 
             flex-direction: row;
-            &__open,&__onhold,&__pending,&__awaiting,&__awaitingapprove,&__more{
+
+            &__open,&__onhold,&__pending,&__awaiting,
+            &__awaitingapprove,&__more {
                 display: flex;
                 flex-direction: row;
                 padding: 0 1rem;
                 font-weight: 500;
-                color: darkslategrey;
+                color: #7A89A0;
                 font-size: medium;
-                font-family: inherit;
+                font-family: Roboto;
+                font-size: fontSz('large');
             }
             &__open{
-                color:map-get($text-color,'counter');
+                color:textCol('counter');
             }
             &__more:hover{
-                color:map-get($text-color,'counter');
+                color:textCol('counter');
             }    
         }
+
         &__box2{
-            display: flex;
-            flex-direction: row;
-            // justify-content: space-evenly;
+            @include flexRow(center);
             margin-left:auto;
-            &__icon1,&__icon2,&__icon3,&__icon4,&__icon5 {
+
+            &__icon1,&__icon2,&__icon3,
+            &__icon4,&__icon5 {
                 display: flex;
                 padding: 0 0 0 1rem;
                 border: 1 px solid red;
+                font-size: fontSz('large');
             }
         }
     }
     &__h2{
         display: flex;
         margin: 1rem 0 1rem 1rem;
+        
         &__chip1{
             display: flex;
+            font-size: fontSz('small');
             &__text2{
                 display: flex;
-                color: map-get($text-color,"counter");
+                color: textCol("counter");
+                
             }
             &__text3{
                 display: flex;
-                color: map-get($text-color,"urgent");
+                color: textCol("urgent");
             }
             &__text4{
                 display: flex;
-                color: map-get($text-color,"high");
+                color: textCol("high");
             }
             &__text5{
                 display: flex;
-                color: map-get($text-color,"medium");
+                color: textCol("medium");
             }
         }
     }

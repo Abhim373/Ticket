@@ -1,0 +1,54 @@
+$text-color:(
+    "counter":#4B80E3,
+    "urgent":#A20000,
+    "high": #DC3E1E,
+    "medium": #DEAA0C,
+    "moving": #AC52FF,
+    "sidenav-text":#6487F6,
+);
+
+$bg-col:(
+    "sidenav-hover":#185EDF,
+    "sidenav-bg":#2d3e5c,
+    "ticket-footer":#F6F7F8
+);
+
+$font-weight:(
+    "light":300,
+    "normal":400,
+    "semibold": 500,
+    "bold":700
+);
+
+$font-size:(
+    "large":14px,
+    "medium":12px
+);
+
+@function textCol($color){
+    @return map-get($text-color, $color);
+}
+
+@function bgCol($color){
+    @return map-get($bg-col, $color);
+}
+
+@function fontSz($size){
+    @return map-get($font-size, $size);
+}
+
+@function weight($wt){
+    @return map-get($font-weight, $wt);
+}
+
+@mixin flexRow($content){
+    display: flex;
+    flex-direction: row;
+    justify-content: $content;
+}
+
+@mixin flexCol($content){
+    display: flex;
+    flex-direction:column;
+    justify-content: $content;
+}
